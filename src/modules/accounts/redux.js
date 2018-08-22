@@ -322,8 +322,22 @@ const otherActions = {
 			};
 		},
 		reducer (action, state) {
+
+			let listElems;
+			const {splitViewListElements} = state;
+
+			if (splitViewListElements && action.user) {
+				listElems = splitViewListElements.map(elem => {
+					if (elem.id === action.user.id) {
+						return action.user;
+					}
+					return elem;
+				});
+			}
+
 			return {
 				...state,
+				splitViewListElements: listElems ? listElems : splitViewListElements,
 				user: action.user,
 				fetchedUser: action.fetchedUser,
 				fetchingUser: action.fetchingUser,

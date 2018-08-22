@@ -36,6 +36,9 @@
     }
     .name {
       font-weight: bold;
+      a:focus {
+        text-decoration: none;
+      }
     }
     .email {
       margin-bottom: 5px;

@@ -10,6 +10,9 @@
   .ant-breadcrumb-link {
     a {
       color: black;
+      &.active {
+        font-weight: bold;
+      }
     }
   }
 }
