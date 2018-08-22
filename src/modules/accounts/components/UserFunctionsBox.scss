@@ -1,0 +1,16 @@
+@import "../../../styles/colors";
+
+.user-functions-box {
+  .user-functions {
+    .user-function {
+      padding: 10px 20px;
+      &:not(:last-child) {
+        border-bottom: 1px solid $xtra-light-grey;
+      }
+    }
+  }
+  .pagination {
+    text-align: right;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../styles/colors";
+.account-dashboard {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .account-dashboard-head-title {
+    display: flex;
+    align-items: center;
+    .gender-icon {
+      margin-right: 10px;
+      line-height: 14px;
+      .icon-svg {
+        svg {
+          * {
+            fill: $grey;
+          }
+        }
+      }
+    }
+  }
+  .account-dashboard-subtitle {
+    padding: 5px 0;
+  }
+  .account-dashboard-contents {
+    .contents-main {
+      margin-bottom: 10px;
+      .content-item {
+        display: flex;
+        align-items: center;
+        & > * {
+          margin-right: 5px;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+        svg {
+          color: $grey;
+          * {
+            fill: $grey!important;
+          }
+        }
+        margin-bottom: 5px;
+      }
+    }
+    .functions, .profiles {
+      border-left: 1px solid $xtra-light-grey;
+      text-align: center;
+      margin-bottom: 10px;
+      .number {
+        background: $light-grey;
+        display: inline-block;
+        padding: 2px 6px;
+        color: white;
+        font-weight: bold;
+        border-radius: 2px;
+        margin-bottom: 10px;
+      }
+    }
+    .functions {
+      .number {
+        background: $green;
+      }
+    }
+    .profiles {
+      .number {
+        background: $red;
+      }
+    }
+  }
+}

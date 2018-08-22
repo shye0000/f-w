@@ -1,0 +1,12 @@
+.split-view-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  li {
+    order: 1;
+  }
+  li.ant-pagination-options {
+    order: 0;
+  }
+}

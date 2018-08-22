@@ -1,0 +1,17 @@
+@import "../../../styles/colors";
+.profile-photo {
+  width: 69px;
+  height: 92px;
+  color: $grey!important;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $xxtra-light-grey;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+  border: 1px solid $xxtra-light-grey;
+}

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  react:
+    build: .
+    container_name: fondations_front_dev
+    environment:
+      - GITLAB_IP=$GITLAB_IP
+      - ENV=$ENV
+    volumes:
+      - ./:/app:rw
+    ports:
+      - "8666:8666"
+      - "6866:6866"
+      - "6686:6686"
+    tty: true

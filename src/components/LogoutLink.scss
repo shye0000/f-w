@@ -1,0 +1,14 @@
+.logout-link {
+  cursor: pointer;
+}
+.logout-icon-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 26px;
+  svg {
+    * {
+      fill: white!important;
+    }
+  }
+}

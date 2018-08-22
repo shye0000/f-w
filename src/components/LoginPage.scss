@@ -1,0 +1,44 @@
+@import "../styles/colors";
+
+.login-page {
+  position: relative;
+  height: 100%;
+  .login-form {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    padding: 30px 50px;
+    .welcome-message {
+      color: $grey;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .app-title {
+      font-size: 26px;
+      color: black;
+      margin-bottom: 30px;
+    }
+    .login-input {
+      font-size: 16px;
+      input {
+        font-size: 16px;
+        height: 50px;
+      }
+    }
+    .login-form-button {
+      width: 100%;
+      font-weight: bold;
+      font-size: 16px;
+      height: 40px;
+      margin-top: 15px;
+    }
+    .login-form-forgot {
+      margin-top: 60px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+}

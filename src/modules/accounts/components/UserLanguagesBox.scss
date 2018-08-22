@@ -1,0 +1,17 @@
+@import "../../../styles/colors";
+.user-languages-box {
+  .language-item {
+    padding: 10px 20px;
+    font-weight: bold;
+    &:not(:last-child) {
+      border-bottom: 1px solid $xtra-light-grey;
+    }
+    .number {
+      margin-right: 5px;
+      color: $grey;
+    }
+    .name {
+      color: black;
+    }
+  }
+}

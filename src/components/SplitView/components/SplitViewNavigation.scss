@@ -1,0 +1,24 @@
+@import "../../../styles/colors";
+
+.split-view-navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  .navigation-position-total {
+    margin-right: 10px;
+    color: $grey;
+    &>* {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+  .navigation-actions {
+    button {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+}

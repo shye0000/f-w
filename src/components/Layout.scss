@@ -1,0 +1,137 @@
+@import "../styles/colors";
+@import "../styles/Vars";
+
+.layout {
+  height: 100%;
+  overflow: hidden;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  .app-header {
+    background-color: black;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0;
+    color: white;
+    position: relative;
+    align-items: center;
+    line-height: $app-header-height;
+    height: $app-header-height;
+    justify-content: space-between;
+    .header-left {
+      background: $primary-color;
+      display: flex;
+      align-items: stretch;
+    }
+    .header-right{
+      display: flex;
+      background-color: $primary-color;
+      align-items: stretch;
+      &>div {
+        &:not(:last-child) {
+          border-right: 1px solid white;
+        }
+      }
+      .language-select-wrapper {
+        padding: 0 15px;
+        .language-select {
+          .language-select-field {
+            .ant-select-selection {
+              padding-left: 20px;
+              background: transparent;
+              color: white;
+              .ant-select-arrow {
+                color: white;
+              }
+              &:hover, &:active, &:visited, &:focus {
+                border-color: white;
+              }
+            }
+          }
+          .global-icon {
+            color: white;
+          }
+        }
+      }
+      .logout-link-wrapper {
+        display: flex;
+        align-items: center;
+        transition: opacity 120ms ease-in-out;
+        padding: 0 15px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .app-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    .app-side-menu {
+      display: flex;
+      flex-direction: column;
+      background: black;
+      width: $app-sider-width;
+      min-width: $app-sider-width;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: 0 0 11px rgba(0, 0, 0, 0.23);
+      .ant-menu-inline, .ant-menu-vertical {
+        background: transparent;
+        border-right: none;
+        flex: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .ant-layout-sider-children {
+        display: flex;
+        flex-direction: column;
+        .menu-toggle-trigger {
+          height: $app-sider-item-height;
+          padding: 0 15px;
+          cursor: pointer;
+          transition: all 120ms ease-in-out;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          overflow: hidden;
+          &:hover {
+            background-color: rgba( $primary-color, .8 );
+          }
+          i.mark {
+            font-size: 20px;
+            color: white;
+            transition: transform 360ms ease-in-out;
+          }
+        }
+      }
+      &.ant-layout-sider-collapsed {
+        .ant-layout-sider-children {
+          .menu-toggle-trigger {
+            i.mark {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+    }
+    .app-page-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+      .app-page {
+        display: flex;
+        flex: 1;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        &>* {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

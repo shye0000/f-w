@@ -1,0 +1,70 @@
+@import "../styles/colors";
+
+.app-name{
+  color: white;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  fill: white;
+  &.shake {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+  &.rubberBand {
+    animation-name: rubberBand;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+  &.with-shuffler {
+    padding-right: 0;
+    .name {
+      margin-right: 17px;
+    }
+  }
+  .app-icon, .name {
+    transition: opacity 120ms ease-in-out;
+  }
+  .app-icon {
+    margin-right: 10px;
+  }
+  .shuffler {
+    padding-left: 17px;
+    background: black;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &:hover {
+    color: white;
+    .app-icon, .name {
+      opacity: 0.8;
+    }
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  30%, 50%, 75% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  40%, 65% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+@keyframes rubberBand {
+  0% , 100%{
+    transform: scale3d(1, 1, 1);
+  }
+  30%, 50%, 75% {
+    transform: scale3d(1.15, .85, 1);
+  }
+  40%, 65% {
+    transform: scale3d(.85, 1.15, 1);
+  }
+}

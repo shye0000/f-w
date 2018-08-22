@@ -1,0 +1,19 @@
+@import "../../styles/Vars";
+.translation-management-wrapper {
+  padding: 20px $app-page-padding;
+  tbody {
+    background: white;
+  }
+  .translation-massages-table {
+    .table-head {
+      .title {
+        color: black;
+      }
+      .right {
+        .search-field {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

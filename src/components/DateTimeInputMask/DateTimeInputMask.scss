@@ -1,0 +1,10 @@
+.input-mask {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.ant-input-disabled {
+    &:hover {
+      border-right-width: 0!important;
+      z-index: initial;
+    }
+  }
+}

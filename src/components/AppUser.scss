@@ -1,0 +1,39 @@
+@import "../styles/colors";
+.app-user{
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  transition: color 120ms ease-in-out;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 20px;
+  .avatar {
+    height: 32px;
+    width: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $background-grey;
+    margin-right: 15px;
+    color: grey;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+  }
+  .user-name {
+    margin-right: 5px;
+  }
+  .user-name, .avatar {
+    transition: opacity 120ms ease-in-out;
+  }
+  &:hover {
+    border-bottom: none;
+    color: white;
+    .user-name, .avatar {
+      opacity: 0.8;
+    }
+  }
+}

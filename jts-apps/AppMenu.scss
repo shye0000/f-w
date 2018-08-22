@@ -1,0 +1,85 @@
+@import "../src/styles/Vars";
+@import "../src/styles/colors";
+.app-menu {
+  color: white;
+  fill: white;
+  width: $app-sider-width;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-right: 1px solid white;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: opacity 120ms ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.app-menu-content {
+  margin: -2.5px;
+  .app-menu-item {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    color: white;
+    font-size: 12px;
+    margin: 2.5px;
+    transition: color 120ms ease-in-out;
+    .item-inner {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .app-icon {
+        svg {
+          * {
+            fill: white;
+            transition: fill 120ms ease-in-out;
+          }
+        }
+      }
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 120ms ease-in-out;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+      color: $grey;
+      .app-icon {
+        svg {
+          * {
+            fill: $grey;
+          }
+        }
+      }
+    }
+    &:hover {
+      &:not(.disabled) {
+        color: $grey;
+        .app-icon {
+          svg {
+            * {
+              fill: $grey;
+            }
+          }
+        }
+        &:after {
+          border: 3px solid rgba(255,255,255,.4);
+        }
+      }
+    }
+  }
+}

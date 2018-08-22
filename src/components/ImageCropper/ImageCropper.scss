@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+.image-cropper {
+  .cropper {
+    text-align: center;
+    .cropper-actions {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .flipped {
+        transform: scaleX(-1);
+      }
+    }
+
+  }
+  .preview-wrapper {
+    text-align: center;
+    .image-cropper-preview {
+      border: 1px solid $xtra-light-grey;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+  }
+}

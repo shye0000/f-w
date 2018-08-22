@@ -1,0 +1,51 @@
+@import "../../../styles/colors";
+
+$defaultColor: rgba(0, 0, 0, 0.65);
+
+.split-view-sorting {
+  display: flex;
+  align-items: stretch;
+  .sort-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    .sort-title {
+      color: $defaultColor;
+      margin-left: 5px;
+      transition: color 120ms ease-in-out;
+    }
+    .sort-way-icon {
+      color: $defaultColor;
+      fill: $defaultColor;
+      margin-left: 5px;
+      transition: color,fill 120ms ease-in-out;
+    }
+    &:hover {
+      .sort-title {
+        color: black;
+      }
+      .sort-way-icon {
+        color: black;
+        fill: black;
+      }
+    }
+  }
+
+  .sort-divider {
+    margin: 0 10px;
+    background: $grey;
+    width: 1px;
+  }
+  .sort-select-icon {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    color: $defaultColor;
+    cursor: pointer;
+    transition: color 120ms ease-in-out;
+    &:hover {
+      color: black;
+    }
+  }
+}

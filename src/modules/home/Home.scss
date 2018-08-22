@@ -1,0 +1,37 @@
+@import "../../styles/Vars";
+@import "../../styles/colors";
+.home {
+  padding: 20px $app-page-padding;
+  text-align: center;
+  .ant-card {
+    margin: auto;
+    width: 500px;
+    max-width: 100%;
+    .ant-card-body {
+      .user-avatar {
+        height: 200px;
+        width: 150px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $background-grey;
+        color: grey;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-transform: uppercase;
+        margin: 20px auto;
+      }
+      .user-name {
+        color: black;
+        font-weight: bold;
+        font-size: 23px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+
+  }
+
+}

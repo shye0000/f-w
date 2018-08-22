@@ -1,0 +1,15 @@
+@import "../styles/Vars";
+@import "../styles/colors";
+.breadcrumb.ant-breadcrumb {
+  padding: 10px $app-page-padding;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid $xtra-light-grey;
+  background: white;
+  font-size: 13px;
+  .ant-breadcrumb-link {
+    a {
+      color: black;
+    }
+  }
+}

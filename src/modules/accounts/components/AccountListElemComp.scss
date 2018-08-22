@@ -1,0 +1,55 @@
+@import "../../../styles/colors";
+.account-list-elem-comp {
+  padding: 15px 15px 15px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-decoration: none;
+  &:focus {
+    text-decoration: none;
+  }
+  .profile-photo {
+    width: 51px;
+    min-width: 51px;
+    max-width: 51px;
+    height: 68px;
+    color: $grey;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $xxtra-light-grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+    border: 1px solid $xxtra-light-grey;
+  }
+  .info {
+    flex: 1;
+    color: black;
+    overflow: hidden;
+    .name, .email {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .email {
+      margin-bottom: 5px;
+    }
+    .tags {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .state {
+
+      }
+      .projects {
+
+      }
+    }
+  }
+}

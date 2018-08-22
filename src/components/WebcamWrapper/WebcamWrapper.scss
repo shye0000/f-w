@@ -1,0 +1,39 @@
+.webcam-wrapper {
+  text-align: center;
+  .video-wrapper {
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background: black;
+    .img-mask {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .webcam-result {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+  .buttons-wrapper {
+    margin-top: 20px;
+    .webcam-button {
+      width: 56px;
+      height: 56px;
+      font-size: 23px;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../styles/colors";
+.click-list-elem-tip {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  max-width: 600px;
+  text-align: center;
+  white-space: normal;
+  .please-search-icon {
+    fill: $light-grey;
+  }
+  .please-search-msg {
+    font-size: 32px;
+    color: $light-grey;
+  }
+}

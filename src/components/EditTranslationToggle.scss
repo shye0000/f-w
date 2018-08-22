@@ -1,0 +1,29 @@
+@import "../styles/colors";
+.edit-translation-toggle {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  button {
+    color: white;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    &:hover, &:visited, &:focus, &:active {
+      background: transparent;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+    .translation-icon {
+      * {
+        fill: white!important;
+      }
+    }
+    &.edit-translation-active {
+      background: $blue;
+      color: white;
+    }
+  }
+}

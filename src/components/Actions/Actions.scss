@@ -1,0 +1,63 @@
+@import "../../styles/colors";
+.actions {
+  display: flex;
+  align-items: center;
+  transition: opacity 120ms ease-in-out;
+  &.visible {
+    opacity: 1!important;
+    visibility: visible;
+  }
+  .action, .more-actions {
+    button {
+      padding-left: 8px!important;
+      padding-right: 8px!important;
+    }
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  .more-actions {
+    button {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.ant-dropdown-menu{
+  min-width:200px;
+  padding: 7px 0;
+  .ant-dropdown-menu-item{
+    .popover-content{
+      padding: 7px;
+      color: black;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .action-icon {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .action-title {
+        flex: 1;
+      }
+      &.danger {
+        .action-icon {
+          color: #f5222d;
+          fill: #f5222d
+        }
+        .action-title {
+          color: #f5222d;
+        }
+      }
+      &.disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+        &:hover {
+          background: white;
+        }
+      }
+    }
+  }
+}

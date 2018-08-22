@@ -1,0 +1,10 @@
+@import "../../../styles/colors";
+
+.user-profiles-box {
+  .profile-item {
+    padding: 10px 20px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $xtra-light-grey;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../styles/colors";
+.dashboard-box {
+  margin-bottom: 10px;
+  background: white;
+  .empty-tag {
+    text-align: left;
+  }
+  &.ant-collapse > .ant-collapse-item {
+    & > .ant-collapse-header {
+      padding: 0;
+    }
+  }
+  .ant-collapse-content {
+    .ant-collapse-content-box {
+      padding: 0;
+    }
+  }
+  .title-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color: $grey;
+    fill: $grey;
+    padding: 10px 20px;
+    overflow: hidden;
+    .title {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      .title-icon {
+        font-size: 23px;
+        margin-right: 10px;
+        svg {
+          fill: $grey!important;
+          * {
+            fill: $grey!important;
+          }
+        }
+      }
+      .title-content {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 5px;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .collapse-icon {
+        transition: transform 120ms ease-in-out;
+        &.collapsed {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    .box-actions {
+      margin-left: 5px;
+    }
+  }
+}
